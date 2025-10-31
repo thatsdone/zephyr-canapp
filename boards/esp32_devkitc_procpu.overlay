@@ -1,0 +1,31 @@
+/*
+ * Copyright (c) 2025 Masanori Itoh
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+&twai {
+        status = "okay";
+        pinctrl-0 = <&twai_default>;
+        pinctrl-names = "default";
+        bus-speed = <500000>;
+
+        can-transceiver {
+            max-bitrate = <1000000>;
+        };
+
+};
+
+#include <zephyr/dt-bindings/pinctrl/esp-pinctrl-common.h>
+#include <dt-bindings/pinctrl/esp32-pinctrl.h>
+#include <zephyr/dt-bindings/pinctrl/esp32-gpio-sigmap.h>
+
+&pinctrl {
+        twai_default: twai_default {
+                group1 {
+                        pinmux = <TWAI_TX_GPIO26>,
+                                 <TWAI_RX_GPIO27>;
+                        bias-disable;
+                };
+        };
+};
