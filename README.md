@@ -22,8 +22,9 @@ https://docs.zephyrproject.org/latest/boards/espressif/esp32_devkitc/doc/index.h
     * `uart:~$ can help`
 
 ## TODO
-* Port simple_can_simulator.py bundled in AGL, Automotive Grade Linux 
-
+* Port [simple_can_simulator.py](https://git.automotivelinux.org/AGL/meta-agl-demo/tree/recipes-demo/simple-can-simulator/files/simple_can_simulator.py) bundled in AGL, Automotive Grade Linux 
+* Consider integration of http_server feature and exposing status/diagnostics information
+* Explore UDS support in Zephyr (as a seperate project) and add UDS responder feature
 ## License
 
 Apache 2.0
