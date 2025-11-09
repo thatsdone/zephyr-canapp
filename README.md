@@ -28,7 +28,7 @@ Qemu supports CAN Bus emulation.
 See [https://www.qemu.org/docs/master/system/devices/can.html](https://www.qemu.org/docs/master/system/devices/can.html)
 for the details.
 
-From my experiences, CONFIG_CAN_KVASER does not work for Zephyr qemu_kvm_arm64 board. Use qemu_x86_64 (for now).
+From my experiences, CONFIG_CAN_KVASER_PCI does not work for Zephyr qemu_kvm_arm64 board. Use qemu_x86_64 (for now).
 
 Edit prj.conf (comment out CONFIG_CAN_ESP32_TWAI and enable CONFIG_CAN_KVASER_PCI), and build it.
 
