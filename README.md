@@ -33,7 +33,7 @@ From my experiences, CONFIG_CAN_KVASER_PCI does not work for Zephyr qemu_kvm_arm
 Edit prj.conf (comment out CONFIG_CAN_ESP32_TWAI and enable CONFIG_CAN_KVASER_PCI), and build it.
 
 ```
-$ west build -p -b qemu_x86_64 .`
+$ west build -p -b qemu_x86_64 .
 ```
 
 
